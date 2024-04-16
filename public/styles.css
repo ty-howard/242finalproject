@@ -1,0 +1,381 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+/* Structure */
+#nav-cont {
+    width: 250px;
+    margin: auto;
+}
+
+#main-cont img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    border: 4px solid darkslategrey;
+}
+
+hr {
+    max-width: 85%;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+}
+
+#homecards {
+    max-width: 90%;
+    min-width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+#homecards section {
+    margin-bottom: 20px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    border: 4px solid darkslategrey;
+}
+
+#homecards img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid grey;
+}
+
+.searchbar {
+    min-width: 40%;
+    border: 1px solid lightgrey;
+    display: block;
+    margin: 0 auto;
+    padding-left: 3px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#results {
+    width: 80%;
+    margin: auto;
+}
+
+#columns-thin {
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+#thinbar {
+    max-width: 100%;
+    border: 1px solid slategrey;
+    border-radius: 10px;
+}
+
+#result {
+    border: 3px solid slategrey;
+    border-radius: 10px;
+    margin: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+#resimg img {
+    margin-top: 8px;
+    border: 2px solid darkslategrey;
+    width: 90%;
+    height: auto;
+}
+
+#restxt p {
+    text-align: left;
+}
+
+#cal-sel {
+    margin: auto;
+    display: block;
+    height: 40px;
+    min-width: 200px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid lightgrey;
+    border-radius: 5px; 
+    font-size: 20px;   
+}
+
+input::file-selector-button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: skyblue;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input::file-selector-button:hover {
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dur {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#map-container {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 4px solid darkslategrey;
+    border-radius: 10px;
+}
+
+#cont-btn {
+    display: block;
+    margin: auto;
+}
+
+/* Mechanics */
+
+.hide {
+    display: none;
+}
+
+.up {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-bottom-color: darkslategrey;
+}
+
+.down {
+    width: 0px;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-top-color: darkslategrey;
+}
+
+.login-btn {
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+}
+
+/* Typography */
+a {
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    color: darkslategrey;
+    text-align: center;
+    font-size: 60px;
+}
+
+h2 {
+    color: grey;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+h4 {
+    margin: 0;
+    font-weight: lighter;
+}
+
+#nav-items span{
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+#nav-items span:hover{
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: skyblue;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: royalblue;
+    cursor: pointer;
+}
+
+.loginbar {
+    min-width: 120px;
+    border: 1px solid lightgrey;
+    display: block;
+    margin: 0 auto;
+    padding-left: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.login-txt {
+    text-decoration: none;
+}
+
+.twoL {
+    flex: 2;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}    
+
+.twoR {
+    flex: 2;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.one {
+    flex: 1;
+    text-align: center;
+    width: 400px;
+
+}
+
+.two {
+    flex: 2;
+}
+
+.three {
+    flex: 3;
+}
+
+#restxt {
+    padding-left: 20px;
+}
+
+input[type='file'] {
+    display: block;
+    margin: auto;
+    padding-left: 103px;
+    margin-bottom: 20px;
+    color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: skyblue;
+    }
+
+    #content {
+        background: white;
+        width: 80%;
+        padding: 5px;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    #triangle {
+        display: none;
+    }
+
+    #nav-items {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #nav-items span {
+        margin-right: 20px; /* Add space between the items */
+        margin-bottom: 10px;
+        max-width: 200px;
+    }
+
+    #nav-items span::after {
+        content: "|"; /* Add pipe symbol */
+        margin-left: 20px; /* Add space after the pipe */
+    }
+
+    #nav-items span:last-child::after {
+        content: ""; /* Remove pipe symbol after the last item */
+    }
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Author: Ty Howard-->
+        <title>Log a Plane</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <a href="./index.html"><h1>RDU Plane Spotter</h1></a>
+
+            <nav id="nav-cont">
+              <div id="triangle" class="down">
+                <div></div>
+              </div>
+              <div id="nav-items" class="hide">
+                  <span><a href="./index.html">Home</a></span>
+                  <span><a href="./gallery.html">Gallery</a></span>
+                  <span><a href="./map.html">Map</a></span>
+                  <span><b><a href="./log.html">Log</a></b></span>
+                  <span><a href="./contact.html">Contact</a></span>
+              </div>
+          </nav>
+
+            <hr>
+
+            <main id="main-cont">
+                <form id="new-plane">
+                    <h2>Add a Flight</h2>
+                    <h3 class="add">Your Name</h3>
+                    <input name="name" class="loginbar" placeholder='Enter Your Name' required>
+                    <h3 class="add">Date</h3>
+                    <input name="date" type="date" id="cal-sel" required>
+                    <h3 class="add">Airline</h3>
+                    <input name="airline" class="loginbar" placeholder='Enter Airline' required>
+                    <h3 class="add">Aircraft</h3>
+                    <input name="aircraft" class="loginbar" placeholder='Enter Aircraft' required>
+                    <h3 class="add">Alliance</h3>
+                    <select name="alliance" class="loginbar" required>
+                        <option value=""></option>
+                        <option value="Star Alliance">Star Alliance</option>
+                        <option value="OneWorld">OneWorld</option>
+                        <option value="SkyTeam">SkyTeam</option>
+                        <option value="No Alliance">No Alliance</option>
+                      </select>
+                    <h3 class="add">Registration</h3>
+                    <input name="reg" class="loginbar" placeholder='Enter Registration' required>
+                    <hr>
+                    <h3>Flight Data</h3>
+                    <h3 class="add">Origin</h3>
+                    <input name="orig" class="loginbar" placeholder='City, ST (CODE)' required>
+                    <h3 class="add">Destination</h3>
+                    <input name="dest" class="loginbar" placeholder='City, ST (CODE)' required>    
+                    <h3 class="add">Duration</h3>
+                    <p id="dur">
+                    <label for="hrs">Hours:</label>
+                    <input type="number" id="hrs" name="hrs" min="0" max="23">
+                    <label for='mins'>Minutes:</label>
+                    <input type="number" id="mins" name="mins" min="0" max="59">
+                    </p>
+                    <hr>
+                    <h3 class="add">Image</h3>
+                    <input name="img" type="file" class="login-txt" accept=".jpg, .png, .jpeg" required>
+                    <button name="sub" type="submit" class="login-btn">SUBMIT</button>  
+                  </form>
+                  <section id="form-sub" class="hide">
+                    <h3>Thanks!</h3>
+                    <p>
+                      Your submission will be reviewed and added to the site shortly.
+                    </p>
+                  </section>
+            </main>
+
+        </div>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/newplane.js"></script>
+    </body>
+</html>

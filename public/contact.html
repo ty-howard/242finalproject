@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Author: Ty Howard-->
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <a href="./index.html"><h1>RDU Plane Spotter</h1></a>
+
+            <nav id="nav-cont">
+                <div id="triangle" class="down">
+                  <div></div>
+                </div>
+                <div id="nav-items" class="hide">
+                    <span><a href="./index.html">Home</a></span>
+                    <span><a href="./gallery.html">Gallery</a></span>
+                    <span><a href="./map.html">Map</a></span>
+                    <span><a href="./log.html">Log</a></span>
+                    <span><b><a href="./contact.html">Contact</a></b></span>
+                </div>
+            </nav>
+
+            <hr>
+
+            <main id="main-cont">
+                <h2>Contact</h2>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="aaf51b87-69eb-4834-8ead-0f64a05e2e1f">
+
+                        <!-- Form Inputs. Each input must have a name="" attribute -->
+                        <p>
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" required>
+                        </p>
+                        <p>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" required>
+                        </p>
+                        <p>
+                        <label for="message">Message: </label>
+                        <textarea name="message" required></textarea>
+                        </p>
+
+                        <button type="submit" id="cont-btn">Submit Form</button>
+
+                        <p id="conf"></p>
+
+                    </form>
+            </main>
+
+        </div>
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/contact.js"></script>
+    </body>
+</html>
