@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Author: Ty Howard-->
+        <title>Flight Tracker</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <a href="./index.html"><h1>RDU Plane Spotter</h1></a>
+
+            <nav id="nav-cont">
+                <div id="triangle" class="down">
+                  <div></div>
+                </div>
+                <div id="nav-items" class="hide">
+                    <span><a href="./index.html">Home</a></span>
+                    <span><a href="./gallery.html">Gallery</a></span>
+                    <span><a href="./map.html">Map</a></span>
+                    <span><b><a href="./tracker.html">Tracker</a></b></span>
+                    <span><a href="./contact.html">Contact</a></span>
+                </div>
+            </nav>
+
+            <hr>
+
+            <main id="main-cont">
+                <div id="map-container">
+                    <h2>Live Flight Tracking</h2>
+                    <p class="center">Zoom in and out to see planes on their way to or from RDU! Click on planes to see more flight details or aircraft information. Tracking provided courtesy of AirNav RadarBox.</p>
+                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width=1200 height=1000 src="https://www.radarbox.com/?widget=1&z=8&hideAirportCard=true&hideAirportWeather=true&showLabels=true&showRoute=true&showFn=true&showAirlineLogo=true&showAircraftModel=true&showRegistration=true&airport=KRDU"></iframe>
+                </div>
+            </main>
+
+        </div>
+    <script src="./scripts/nav.js"></script>
+    </body>
+</html>

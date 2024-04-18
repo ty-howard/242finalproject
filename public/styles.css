@@ -5,7 +5,6 @@ body {
 
 /* Structure */
 #nav-cont {
-    width: 250px;
     margin: auto;
 }
 
@@ -15,6 +14,13 @@ body {
     margin: auto;
     display: block;
     border: 4px solid darkslategrey;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 10px;
 }
 
 hr {
@@ -44,20 +50,13 @@ hr {
     margin-top: 10px;
     margin-bottom: 20px;
     width: 200px;
-    height: 200px;
+    height: auto;
     border: 2px solid grey;
 }
 
-.searchbar {
-    min-width: 40%;
-    border: 1px solid lightgrey;
-    display: block;
-    margin: 0 auto;
-    padding-left: 3px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-    border-radius: 5px;
-    font-size: 20px;
+.detHR {
+    width: 80%;
+    margin-left: 0;
 }
 
 #results {
@@ -84,29 +83,22 @@ hr {
     padding-bottom: 10px;
     cursor: pointer;
     background-color: whitesmoke;
+    min-width: 44%;
+    max-width: 44%;
 }
 
 #resimg img {
-    margin-top: 8px;
     border: 2px solid darkslategrey;
-    width: 90%;
+    max-width: 90%;
     height: auto;
+    max-height: 150px;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 8px;
 }
 
 #restxt p {
     text-align: left;
-}
-
-#cal-sel {
-    margin: auto;
-    display: block;
-    height: 40px;
-    min-width: 200px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid lightgrey;
-    border-radius: 5px; 
-    font-size: 20px;   
 }
 
 input::file-selector-button {
@@ -146,13 +138,6 @@ input::file-selector-button:hover {
     width: 60%;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
 .close:hover, .close:focus {
     color: black;
     text-decoration: none;
@@ -174,15 +159,84 @@ input::file-selector-button:hover {
 
 #map-container iframe {
     width: 100%;
-    height: 300px;
+    height: 600px;
     border: 4px solid darkslategrey;
     border-radius: 10px;
+}
+
+#photos {
+    max-width: 71%;
+    margin: auto;
+}
+
+#photos img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
 }
 
 #cont-btn {
     display: block;
     margin: auto;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+  
+  .close {
+    color: #aaa;
+    font-weight: bold;
+    float: right;
+  }
+  
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #img-prev-section {
+    width: 100px;
+    border: 3px solid darkslategrey;
+    max-width: 100px;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 0;
+  }
+  #img-prev {
+    padding: 2.5%;
+    display: block;
+    margin: auto;
+    max-width: 95%;
+  }
+
+  #img-prev-section img {
+    border: none;
+    border-radius: 0;
+    max-width: 95%;
+  }
 
 /* Mechanics */
 
@@ -212,14 +266,30 @@ input::file-selector-button:hover {
     margin-bottom: 50px;
 }
 
+#add-link {
+    text-decoration: none;
+  }
+  
+  #edit-link {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+  
+  #delete-link {
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    margin-right: 20px;
+  }
+
 /* Typography */
 a {
     text-decoration: none;
     color: darkslategrey;
-}
-
-p {
-    text-align: center;
 }
 
 h1 {
@@ -243,6 +313,14 @@ h3 {
 h4 {
     margin: 0;
     font-weight: lighter;
+}
+
+.center {
+    text-align: center;
+}
+
+.space {
+    margin: 10px;
 }
 
 #nav-items span{
@@ -306,7 +384,6 @@ button:hover {
 
 .one {
     flex: 1;
-    text-align: center;
     width: 400px;
 
 }
@@ -320,15 +397,20 @@ button:hover {
 }
 
 #restxt {
-    padding-left: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 input[type='file'] {
     display: block;
     margin: auto;
-    padding-left: 103px;
     margin-bottom: 20px;
+    margin-top: 20px;
     color: transparent;
+}
+
+#upload {
+    margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -344,9 +426,15 @@ input[type='file'] {
         border-radius: 10px;
     }
 
+    .content {
+        display: block;
+        margin: auto;
+    }
+
     .columns {
         display: flex;
         flex-wrap: wrap;
+        margin: auto;
     }
 
     .one {
@@ -376,6 +464,10 @@ input[type='file'] {
 
     #nav-items span:last-child::after {
         content: ""; /* Remove pipe symbol after the last item */
+    }
+
+    .hidden {
+        display: none;
     }
 
 }
