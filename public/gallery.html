@@ -40,18 +40,18 @@
                                 <section class="columns">
                                     <p class="space">
                                         <label for="airline">Airline:</label>
-                                        <input type="text" id="airline" name="airline" required minlength="3"/>
+                                        <input class="loginbar block" type="text" id="airline" name="airline" required minlength="3"/>
                                     </p>
                                     <p class="space">
                                         <label for="aircraft">Aircraft Type:</label>
-                                        <input type="text" id="aircraft" name="aircraft" required minlength="3"/>
+                                        <input class="loginbar block" type="text" id="aircraft" name="aircraft" required minlength="3"/>
                                     </p>
                                 </section>
                                 <section class="columns">
                                     <p class="space">
                                         <label for="alliance">Alliance:</label>
-                                        <select name="alliance" required>
-                                            <option value=""></option>
+                                        <select class="loginbar block" name="alliance" required>
+                                            <option value="" disabled selected>Select Alliance</option>
                                             <option value="Star Alliance">Star Alliance</option>
                                             <option value="OneWorld">OneWorld</option>
                                             <option value="SkyTeam">SkyTeam</option>
@@ -60,21 +60,21 @@
                                     </p>
                                     <p class="space">
                                         <label for="registration">Plane Registration Number:</label>
-                                        <input type="text" id="registration" name="registration" required minlength="3"/>
+                                        <input class="loginbar block" type="text" id="registration" name="registration" required minlength="3"/>
                                     </p>
                                 </section>
-                                <hr>
+                                <hr class="detHR">
                                 <p>
                                     <label for="user">User Name:</label>
-                                    <input type="text" id="user" name="user" required minlength="3"/>
+                                    <input class="loginbar" type="text" id="user" name="user" required minlength="3"/>
                                 </p>
                                 <p>
                                     <label for="date">Date Spotted:</label>
-                                    <input name="date" type="date" id="cal-sel" required>
+                                    <input class="loginbar" name="date" type="date" id="cal-sel" required>
                                 </p>
                                 <p>
                                     <label for="notes">Notes:</label>
-                                    <input id="notes" name="notes" minlength="5" />
+                                    <textarea class="loginbar notes" id="notes" name="notes" rows="5" cols="50"></textarea>
                                 </p>
                                 <section class="columns" id="upload">
                                     <p id="img-prev-section">

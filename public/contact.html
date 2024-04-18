@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="content">
+        <div id="contact-content">
             <a href="./index.html"><h1>RDU Plane Spotter</h1></a>
 
             <nav id="nav-cont">
@@ -32,22 +32,23 @@
                         <input type="hidden" name="access_key" value="aaf51b87-69eb-4834-8ead-0f64a05e2e1f">
 
                         <!-- Form Inputs. Each input must have a name="" attribute -->
+                        <p class="center">Please feel free to contact us using the form below with any site issues or reports of incorrect information.</p>
                         <p class="center">
                         <label for="name">Name: </label>
-                        <input type="text" name="name" required>
+                        <input class="loginbar" type="text" name="name" required>
                         </p>
                         <p class="center">
                         <label for="email">Email: </label>
-                        <input type="email" name="email" required>
+                        <input class="loginbar" type="email" name="email" required>
                         </p>
                         <p class="center">
                         <label for="message">Message: </label>
-                        <textarea name="message" required></textarea>
+                        <textarea class="loginbar notes" name="message" rows="5" cols="50" required></textarea>
                         </p>
 
-                        <button type="submit" id="cont-btn">Submit Form</button>
-
                         <p id="conf"></p>
+
+                        <button type="submit" id="cont-btn">Submit Form</button>
 
                     </form>
             </main>

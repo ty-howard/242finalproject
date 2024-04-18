@@ -2,6 +2,8 @@ const showEmailResult = async(e) => {
     e.preventDefault();
   
     const result = document.getElementById("conf");
+    result.innerHTML = "Please wait....";
+  
     let response = await getEmailResult();
   
     if(response.status == 200){
@@ -9,8 +11,19 @@ const showEmailResult = async(e) => {
     } else {
         result.innerHTML = "Sorry, your email was not sent";
     }
-  
-  };
+
+    // Reset the form after a delay
+    setTimeout(() => {
+        const form = document.getElementById("contact-form");
+        form.reset();
+    }, 3000);
+
+    // Hide the confirmation message after a delay
+    setTimeout(() => {
+        result.innerHTML = "";
+    }, 3000);
+};
+
   
   const getEmailResult = async() => {
     const form = document.getElementById("contact-form");
