@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    gap: 10px;
+    justify-content: center;
 }
 
 hr {
@@ -480,7 +480,7 @@ input[type='file'] {
     }
 
     #result {
-        max-width: 44%;
+        max-width: 44%
     }
 
 }
