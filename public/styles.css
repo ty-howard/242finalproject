@@ -21,6 +21,14 @@ body {
     flex-wrap: wrap;
     margin: auto;
     justify-content: center;
+    min-width: 80%;
+    max-width: 80%;
+}
+
+#mainimg {
+    min-width: 80%;
+    max-width: 80%;
+    height: auto;
 }
 
 hr {
@@ -30,8 +38,8 @@ hr {
 }
 
 #homecards {
-    max-width: 90%;
-    min-width: 90%;
+    max-width: 80%;
+    min-width: 80%;
     margin: auto;
     text-align: center;
 }
@@ -167,10 +175,12 @@ input::file-selector-button:hover {
 #photos {
     max-width: 71%;
     margin: auto;
+    justify-content: center;
 }
 
 #photos img {
-    width: 300px;
+    min-width: 45%;
+    max-width: 45%;
     height: auto;
     margin: 10px;
 }
